@@ -1,4 +1,4 @@
-import citiesReducer from '../../reducers/citiesReducer';
+import citiesReducer from '../../reducers/cities-Reducer';
 
 describe('citiesReducer', () => {
 
