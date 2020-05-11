@@ -1,0 +1,22 @@
+_Monday_
+README
+Component Planning
+Decide on search parameters
+Decide on display
+
+_Tuesday_
+Add a form
+Data visualization
+
+
+_Wednesday_
+Style, style, style - flat design?
+Deployment - ?
+
+
+Stretch: 
+* Compare 2 Cities
+  *Data visualization?
+* User can review a city?
+* useState hook
+* useEffect hook
