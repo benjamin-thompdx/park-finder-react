@@ -20,7 +20,7 @@ class Cities extends React.Component {
     //       (jsonifiedResponse) => {
     //         this.setState({
     //           isLoaded: true,
-    //           cities: jsonifiedResponse._em  bedded["city:search-results"]
+    //           cities: jsonifiedResponse._embedded["city:search-results"]
     //         });
     //       })
     //       .catch((error) => {
@@ -44,18 +44,19 @@ class Cities extends React.Component {
       } else if (isLoading) {
         return <React.Fragment>Loading...</React.Fragment>;
       } else {
-        // console.log(Object.values(cities))
-        // const testArray = Object.values(cities);
+        console.log(cities)
+        console.log(Object.values(cities))
+        const testArray = Object.values(cities);
         return (
           <React.Fragment>
             <h1>City results</h1>
-            {/* <ul>
+             <ul>
               {testArray.map((city, index) =>
               <li key={index}>
                 <h4>{city.matching_full_name}</h4>
               </li>
               )}
-            </ul> */}
+            </ul>
           </React.Fragment>
         );
       }
