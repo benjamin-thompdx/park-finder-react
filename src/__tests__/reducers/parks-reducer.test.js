@@ -8,13 +8,15 @@ describe('parksReducer', () => {
   const defaultState = {
     isLoading: false,
     parks: [],
-    error: null
+    error: null,
+    selectedPark: null
   };
 
   const loadingState = {
     isLoading: false,
     parks: [],
-    error: null
+    error: null,
+    selectedPark: null
   };
 
   test('should successfully return default state if no action is passed to it', () => {
@@ -22,7 +24,8 @@ describe('parksReducer', () => {
       {
       isLoading: false,
       parks: [],
-      error: null
+      error: null,
+      selectedPark: null
       }
     );
   });
@@ -35,7 +38,8 @@ describe('parksReducer', () => {
     expect(parksReducer(defaultState, action)).toEqual({
       isLoading: true,
       parks: [],
-      error: null
+      error: null,
+      selectedPark: null
     });
   });
 
@@ -49,7 +53,8 @@ describe('parksReducer', () => {
     expect(parksReducer(loadingState, action)).toEqual({
       isLoading: false,
       parks: [],
-      error: "An error"
+      error: "An error",
+      selectedPark: null
     });
   });
 

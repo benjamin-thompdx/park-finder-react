@@ -35,7 +35,7 @@ class Parks extends React.Component {
 
                 {/* <h4>{park.matching_full_name}</h4> */}
               </li>
-              )}
+              )} 
             </ul>
           </React.Fragment>
         );

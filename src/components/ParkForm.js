@@ -18,14 +18,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-
 const ParkForm = props => {
   const parks = useSelector(state => state.parks)
   const parkList = parks.map((e) => <MenuItem key={e.id}>{e.name}</MenuItem>)
   
   const classes = useStyles();
-  // const [parks] = React.useState('');
+  // const [parks] = React.useState('');  
 
   const handleChange = (event) => {
     console.log("handle change activated!")

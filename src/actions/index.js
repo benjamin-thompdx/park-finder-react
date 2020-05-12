@@ -28,3 +28,16 @@ export const makeApiCall = () => {
       });
   }
 }
+
+export const selectedPark = (park) => {
+  const { name, location, description, area, dateEstablished, id } = park;
+  return {
+    type: c.SELECTED_PARK,
+    name: name,
+    location: location,
+    dateEstablished: dateEstablished,
+    area: area,
+    description: description,
+    id: id
+  }
+};
