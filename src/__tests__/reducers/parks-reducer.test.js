@@ -1,27 +1,27 @@
-import citiesReducer from '../../reducers/cities-Reducer';
-import * as c from './../../actions/ActionTypes';
+import parksReducer from '../../reducers/parks-Reducer';
+import * as c from '../../actions/ActionTypes';
 
-describe('citiesReducer', () => {
+describe('parksReducer', () => {
 
   let action;
 
   const defaultState = {
     isLoading: false,
-    cities: [],
+    parks: [],
     error: null
   };
 
   const loadingState = {
     isLoading: false,
-    cities: [],
+    parks: [],
     error: null
   };
 
   test('should successfully return default state if no action is passed to it', () => {
-    expect(citiesReducer(defaultState, {type:null})).toEqual(
+    expect(parksReducer(defaultState, {type:null})).toEqual(
       {
       isLoading: false,
-      cities: [],
+      parks: [],
       error: null
       }
     );
@@ -29,26 +29,26 @@ describe('citiesReducer', () => {
 
   test('should successfully change isLoading from false to true', () => {
     action = {
-      type: c.REQUEST_CITIES
+      type: c.REQUEST_PARKS
     };
 
-    expect(citiesReducer(defaultState, action)).toEqual({
+    expect(parksReducer(defaultState, action)).toEqual({
       isLoading: true,
-      cities: [],
+      parks: [],
       error: null
     });
   });
 
-  test('failing to get cities should change isLoading to false and add an error message', () => {
+  test('failing to get parks should change isLoading to false and add an error message', () => {
     const error = "An error";
     action = {
-      type: c.GET_CITIES_FAILURE,
+      type: c.GET_PARKS_FAILURE,
       error
     };
 
-    expect(citiesReducer(loadingState, action)).toEqual({
+    expect(parksReducer(loadingState, action)).toEqual({
       isLoading: false,
-      cities: [],
+      parks: [],
       error: "An error"
     });
   });

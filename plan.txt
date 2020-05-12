@@ -1,8 +1,8 @@
 _Monday_
 README
-Component Planning
+X Component Planning
 Decide on search parameters
-Decide on display
+X Decide on display
 
 _Tuesday_
 Add a form
@@ -15,8 +15,8 @@ Deployment - ?
 
 
 Stretch: 
-* Compare 2 Cities
+* Compare 2 Parks
   *Data visualization?
-* User can review a city?
+* User can review a park?
 * useState hook
 * useEffect hook

@@ -4,13 +4,31 @@
 
 ## A wonderful application made by: Katy, Matt, Ben, & Zakk
 
+### Description
+_Web Application that shows different quality of life indexes based off of user input of city._
+
 ## Wireframe
 
+[img]
+
 ### User Stories
+* A user should be able to search for a city
+* A user should be able to see API call results for that city
+* When a search doesn't return a result...
 
 ### Technology
+* Git
+* JavaScript
+* Jest
+* React
+* Redux
+* [Teleport API](https://developers.teleport.org/)
 
+### License
 
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright &copy; 2020 **_Katy, Matt, Ben, Zakk_** 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

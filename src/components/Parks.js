@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { makeApiCall } from './../actions';
+import { makeApiCall } from '../actions';
 
-class Cities extends React.Component {
+class Parks extends React.Component {
     constructor(props) {
       super(props);
     }
@@ -13,25 +13,25 @@ class Cities extends React.Component {
     }
     
     render(){
-      const { error, isLoading, cities } = this.props;
-      console.log("CITIES: ", cities);
+      const { error, isLoading, parks } = this.props;
+      console.log("PARKS: ", parks);
       if (error) {
         return <React.Fragment>Error: {error.message}</React.Fragment>;
       } else if (isLoading) {
         return <React.Fragment>Loading...</React.Fragment>;
       } else {
-        console.log(cities)
-        console.log(Object.values(cities))
-        const testArray = Object.values(cities);
+        console.log(parks)
+        console.log(Object.values(parks))
+        const testArray = Object.values(parks);
         return (
           <React.Fragment>
-            <h1>City results</h1>
+            <h1>Park Results</h1>
              <ul>
-              {testArray.map((city, index) =>
+              {testArray.map((park, index) =>
               <li key={index}>
-                <h4>{city.name} : {city.score_out_of_10}</h4>
+                <h4>{park.name} : {park.location}</h4>
 
-                {/* <h4>{city.matching_full_name}</h4> */}
+                {/* <h4>{park.matching_full_name}</h4> */}
               </li>
               )}
             </ul>
@@ -43,11 +43,11 @@ class Cities extends React.Component {
 
   const mapStateToProps = state => {
     return {
-      cities: state.cities,
+      parks: state.parks,
       isLoading: state.isLoading,
       error: state.error
     }
   }
     
     
-  export default connect(mapStateToProps)(Cities);
+  export default connect(mapStateToProps)(Parks);

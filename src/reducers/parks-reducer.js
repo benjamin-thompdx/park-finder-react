@@ -1,23 +1,23 @@
-import * as c from './../actions/ActionTypes';
+import * as c from '../actions/ActionTypes';
 
 const initialState = {
   isLoading: false,
-  cities: [],
+  parks: [],
   error: null
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case c.REQUEST_CITIES:
+    case c.REQUEST_PARKS:
       return Object.assign({}, state, {
         isLoading: true
       });
-    case c.GET_CITIES_SUCCESS:
+    case c.GET_PARKS_SUCCESS:
       return Object.assign({}, state, {
         isLoading: false,
-        cities: action.cities
+        parks: action.parks
       });
-    case c.GET_CITIES_FAILURE:
+    case c.GET_PARKS_FAILURE:
       return Object.assign({}, state, {
         isLoading: false,
         error: action.error
