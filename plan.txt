@@ -5,12 +5,14 @@ Decide on search parameters
 X Decide on display
 
 _Tuesday_
-Add a form
+X Add a form
 Data visualization
 
 
 _Wednesday_
-Style, style, style - flat design?
+Finish selecting park item
+Add details
+Add visualization
 Deployment - ?
 
 
