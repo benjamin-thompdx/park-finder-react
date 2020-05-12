@@ -17,11 +17,11 @@ export const getParksFailure = (error) => ({
 export const makeApiCall = () => {
   return dispatch => {
     dispatch(requestParks);
-    return fetch(`https://localhost:5000/api/parks/`)
+    return fetch(`https://localhost:5001/api/parks/`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
-          dispatch(getParksSuccess(jsonifiedResponse.name));
+          dispatch(getParksSuccess(jsonifiedResponse));
         })
       .catch((error) => {
         dispatch(getParksFailure(error));
