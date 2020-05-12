@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { makeApiCall } from '../actions';
+import ParkForm from './ParkForm';
 
 class Parks extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class Parks extends React.Component {
         const testArray = Object.values(parks);
         return (
           <React.Fragment>
+            <ParkForm />
             <h1>Park Results</h1>
              <ul>
               {testArray.map((park, index) =>

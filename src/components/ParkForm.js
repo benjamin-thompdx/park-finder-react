@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -18,15 +19,17 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const parkList = parks.map((e) => <MenuItem key={e.id}>{e.name}</MenuItem>)
 
 const ParkForm = props => {
+  const parks = useSelector(state => state.parks)
+  const parkList = parks.map((e) => <MenuItem key={e.id}>{e.name}</MenuItem>)
   
   const classes = useStyles();
-  const [parks] = React.useState('');
+  // const [parks] = React.useState('');
 
   const handleChange = (event) => {
-    setPark(event.target.value);
+    console.log("handle change activated!")
+    // setPark(event.target.value);
   };
   
 
@@ -37,7 +40,6 @@ const ParkForm = props => {
         <Select
           labelId="park-dropdown-label"
           id="park-dropdown"
-          value={park}
           onChange={handleChange}
         >
           {parkList}
